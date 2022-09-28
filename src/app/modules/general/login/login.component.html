@@ -1,0 +1,65 @@
+<header>
+        <div class="header">
+            <div class="federation">
+                <label>
+                    FEDERATION
+                </label>
+            </div>
+            <div class="techno">
+                <label>
+                    GNU HEALTH
+                </label>
+            </div>
+        </div>
+</header>
+<section class="clearfix">
+    <h2> Sign In </h2>
+    <div class="label">
+        <label>
+            Federation Id
+        </label>
+    </div>
+    <div class="input">
+            <input #user type="text" class="form-control" name="user" id="user" placeholder="Enter your login">
+    </div>
+    <div class="label">
+        <label>
+            Password
+        </label>
+    </div>
+        <div class="input">
+        <input #pass type="password" class="form-control" name="pass" id="pass"></div>
+    <div class="label">
+        <label>
+            <p id = "erreur_id" style = "color: red;"> {{ erreur }} </p>
+        </label>
+    </div>
+    <div id="login">
+        <button type="button" (click)="login(user.value, pass.value)">LOGIN</button></div>
+</section>
+    <div #mymodal class="modal fade" id="mymodal" tabindex="-1" aria-labelledby="codeLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <label class="modal-title" id="codeLabel">
+                        Confirmation
+                    </label>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label id="codeBody">
+                        Entrer le code envoyé par mail pour confirmer l'authentification
+                    </label>
+                    <p style="color: red;" id="erreur-code">{{ erreur }}</p>
+                    <input #code type="text" id="code" name="code" class="form-control">
+                </div>
+                <div>
+                    <button type="button" id="annuler" class="btn btn-secondary" data-bs-dismiss="modal">
+                        ANNULER
+                    </button>
+                   <button type="button" id="envoyer" class="btn btn-primary" (click) = "login2(user.value, code.value)">ENVOYER</button>
+                </div>
+            </div>
+        </div>
+    </div>

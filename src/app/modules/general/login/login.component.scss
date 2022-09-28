@@ -26,7 +26,7 @@
   }
 }
 section{
-    background-color: azure;
+    background-color: rgba(240, 255, 255, 0.397);
     font-size: 2.5vw;
     width: 25%;
     height: 50%;
@@ -116,6 +116,7 @@ h2 {
 input, button {
     border-radius: 5px;
     border-color: aqua;
+    background-color: #fffefe6b;
     border-style: outset;
     border: 0px 0px 2px 2px;
     width: 21vw;

@@ -32,37 +32,37 @@ export class LoginComponent implements OnInit {
   }
 
   login(user, pass) {
-    // this.loginService.login(user, pass).subscribe(
-    //   {
-    //     next: res => {
-    //       console.log(res)
+    this.loginService.login(user, pass).subscribe(
+      {
+        next: res => {
+          console.log(res)
           this.openFormModal()
-      //   if(res){
-      //     CookieS.setUser({user, pass})
-      //   }
-      // },
-      // error: () => {
-      //   CookieS.remove()
-      //   this.erreur = "Username or password incorrect"
-      //   user = user
-      //   pass = pass
-      // }})
+        if(res){
+          CookieS.setUser({user, pass})
+        }
+      },
+      error: () => {
+        CookieS.remove()
+        this.erreur = "Username or password incorrect"
+        user = user
+        pass = pass
+      }})
   }
 
   login2(user, code) {
-    // console.log(user, code)   
-    // this.loginService.login2(user, code).subscribe({
-    //   next: res => {
-    //     console.log(code)
-    //     this.userId = user
+    console.log(user, code)   
+    this.loginService.login2(user, code).subscribe({
+      next: res => {
+        console.log(code)
+        this.userId = user
         this.router.navigate(['/people']);
         this.formModal.hide();  
-      // },
-      // error: () => {
-      //   CookieS.remove()
-      //   this.erreur = "Code incorrect"
-      //   this.router.navigate(['/'],{state: {erreur: this.erreur}})
-      // }})
+      },
+      error: () => {
+        CookieS.remove()
+        this.erreur = "Code incorrect"
+        this.router.navigate(['/'],{state: {erreur: this.erreur}})
+      }})
   }
 
 }

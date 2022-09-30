@@ -2,8 +2,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AboutService } from './about.service';
 import { People } from './people';
-import { jsPDF } from 'jspdf';
-import  {html2canvas} from 'html2canvas' ;
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 import { LoginComponent } from '../login/login.component';
 
 @Component({

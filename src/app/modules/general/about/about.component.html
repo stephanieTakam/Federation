@@ -1,108 +1,116 @@
-<p>ca va</p>
-<div class="user">
-    <table>
-        <tr>
-            <td>
-                <label for="">
-                    User id : 
-                </label>
-            </td>
-            <td>
-                <label for="id">
-                    {{ people.id }}
-                </label>
-            </td>
-        </tr>
-       <tr>
-            <td>
-                <label for="">
-                    Nom : 
-                </label>
-            </td>
-            <td>
-                <label for="">
-                    {{ people.name }}
-                </label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="">
-                    Prenom : 
-                </label>
-            </td>
-            <td>
-                <label for="">
-                    {{ people.lastname }}
-                </label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="">
-                    Date de naissance : 
-                </label>
-            </td>
-            <td>
-                <label for="">
-                    {{ people.dob }}
-                </label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="">
-                    Genre : 
-                </label>
-            </td>
-            <td>
-                <label for="">
-                    {{ people.gender }}
-                </label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="">
-                    Education : 
-                </label>
-            </td>
-            <td>
-                <label for="">
-                    {{ people.education }}
-                </label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="">
-                    Status : 
-                </label>
-            </td>
-            <td>
-                <label for="">
-                    {{ people.marital_status}}
-                </label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="">
-                    Profession : 
-                </label>
-            </td>
-            <td>
-                <label for="">
-                    {{ people.profession }}
-                </label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <button class="example" type='submit'>Consulter mes résultats</button>
-            </td>
-        </tr>
-</table>
+<div class="row  justify-content-evently">
+    <div class="col justify-content-evently">
+        <span class="material-symbols-outlined">
+            person
+            </span>
+    </div>
+    <div class="col justify-content-evently">
+        <div class="user" id="htmlData">
+            <table >
+                <tr>
+                    <td>
+                        <label for="">
+                            User id : 
+                        </label>
+                    </td>
+                    <td>
+                        <label for="id">
+                            {{ people.id }}
+                        </label>
+                    </td>
+                </tr>
+               <tr>
+                    <td>
+                        <label for="">
+                            Nom : 
+                        </label>
+                    </td>
+                    <td>
+                        <label for="">
+                            {{ people.name }}
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">
+                            Prenom : 
+                        </label>
+                    </td>
+                    <td>
+                        <label for="">
+                            {{ people.lastname }}
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">
+                            Date de naissance : 
+                        </label>
+                    </td>
+                    <td>
+                        <label for="">
+                            {{ people.dob }}
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">
+                            Genre : 
+                        </label>
+                    </td>
+                    <td>
+                        <label for="">
+                            {{ people.gender }}
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">
+                            Education : 
+                        </label>
+                    </td>
+                    <td>
+                        <label for="">
+                            {{ people.education }}
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">
+                            Status : 
+                        </label>
+                    </td>
+                    <td>
+                        <label for="">
+                            {{ people.marital_status}}
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">
+                            Profession : 
+                        </label>
+                    </td>
+                    <td>
+                        <label for="">
+                            {{ people.profession }}
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="example" type='submit' (click)="openPDF()">Download PDF</button>
+                    </td>
+                </tr>
+        </table>
+        </div>
+    </div>
 </div>
 <div class="modal">
     <div class="modal-content">

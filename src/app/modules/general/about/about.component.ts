@@ -13,7 +13,7 @@ import { LoginComponent } from '../login/login.component';
 })
 export class AboutComponent implements OnInit {
   
-  @ViewChild('htmlData') html!: ElementRef;
+  @ViewChild('htmlData') htmlData!: ElementRef;
 
   people: People ;
  

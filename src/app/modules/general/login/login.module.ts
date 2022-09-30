@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
 import { ServicesService } from '../../application/services.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import { ServicesService } from '../../application/services.service';
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     LoginRoutingModule,
   ],
   exports: [

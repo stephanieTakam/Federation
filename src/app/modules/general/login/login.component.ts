@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
       next: res => {
         console.log(code)
         this.userId = user
-        this.router.navigate(['/people']);
+        this.router.navigate(['/people'], {state: {id: this.userId}});
         this.formModal.hide();  
       },
       error: () => {
